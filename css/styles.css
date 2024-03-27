@@ -1,0 +1,149 @@
+:root {
+    --gradient-color-1:rgba(34,193,195,1);
+    --gradient-color-2: rgba(253,187,45,1);
+    --primary-font: "Lato", sans-serif;  
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--gradient-color-1);
+    background: linear-gradient(0deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 100%);
+    color: #333;
+    height: 800px;
+    font-family: var(--primary-font); 
+    font-size: 19px;
+    font-weight: 300; 
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 94vh;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 1.35em;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 95%;
+    height: 30px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+#input {
+    text-align: center;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin: 10px;
+    width: 85%
+}
+
+#input:focus {
+    outline: 1px solid var(--gradient-color-2);
+}
+
+#addButton {
+    background-color: var(--gradient-color-1);
+    color: #fff;
+    mix-blend-mode: normal;
+    font-size: 25px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+#addButton:hover {
+    background-color: var(--gradient-color-2);
+    cursor: pointer;
+}
+
+.delete {
+    display: none;
+}
+
+ol{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+    width: 95%;
+    overflow: scroll;
+}
+
+ol li{
+    list-style-type: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span {
+    font-size: inherit;
+}
+.strike{
+    text-decoration: line-through;
+}
+
+ol li:hover {
+    cursor: pointer;
+}
+
+li > crossOutButton {
+    background: none;
+    border: none;
+    color: var(--gradient-color-1);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+
+@media all and (max-width: 519px) {
+    .container {
+        width: 90%; 
+    }
+}
+
+@media all and (min-width: 520px) {
+    .container {
+        width: 500px;
+    }
+}
+

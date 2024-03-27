@@ -2,18 +2,20 @@ function newItem() {
     //1. Adding a new item to the list of items:
     let li = $("<li></li>");
     let inputValue = $("#input").val();
-    li.append(inputValue);
+    let span = $("<span></span>").append(inputValue); 
+    li.append(span);
   
     if ($("#input").val() === "") {
       alert("You must write something!");
     } else {
       let list = $("#list");
       list.append(li);
+      $('#input').val(''); //clears the input after adding the item
     }
 
     //2. Crossing out an item from the list of items:
-    li.on("dblclick", function () {
-      li.toggleClass("strike");
+    span.on("dblclick", function () {
+      span.toggleClass("strike");
     });
   
     //3(i). Adding the delete button "X":
@@ -29,4 +31,4 @@ function newItem() {
   
     // 4. Reordering the items:
     $("#list").sortable();
-  }
+}
