@@ -14,8 +14,9 @@ function newItem() {
     }
 
     //2. Crossing out an item from the list of items:
-    span.on("dblclick", function () {
+    li.on("dblclick", function () {
       span.toggleClass("strike");
+      li.toggleClass("opacity");
     });
   
     //3(i). Adding the delete button "X":
